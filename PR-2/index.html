@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shubham | Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-[#080b14] text-white">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="fixed top-0 left-0 w-full z-50
+                   bg-[#080b14]/80 backdrop-blur-xl
+                   border-b border-white/5">
+
+        <nav class="max-w-6xl mx-auto px-6 py-4
+                    flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#home"
+               class="text-2xl font-bold">
+                Shubham<span class="text-violet-500">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+
+                <a href="#home"
+                   class="hover:text-violet-400 transition">
+                    Home
+                </a>
+
+                <a href="#about"
+                   class="hover:text-violet-400 transition">
+                    About
+                </a>
+
+                <a href="#skills"
+                   class="hover:text-violet-400 transition">
+                    Skills
+                </a>
+
+                <a href="#projects"
+                   class="hover:text-violet-400 transition">
+                    Projects
+                </a>
+
+                <a href="#experience"
+                   class="hover:text-violet-400 transition">
+                    Experience
+                </a>
+
+                <a href="#contact"
+                   class="hover:text-violet-400 transition">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Button -->
+            <a href="#contact"
+               class="hidden sm:block
+                      bg-violet-600 hover:bg-violet-500
+                      px-5 py-2.5 rounded-full
+                      text-sm font-semibold
+                      transition">
+                Let's Talk →
+            </a>
+
+            <!-- Mobile Menu -->
+            <button class="md:hidden text-2xl">
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section id="home"
+                 class="min-h-screen
+                        max-w-6xl mx-auto
+                        px-6 pt-32 pb-20
+                        flex items-center">
+
+            <div class="grid lg:grid-cols-2 gap-16
+                        items-center w-full">
+
+                <!-- LEFT -->
+
+                <div>
+
+                    <!-- Small Badge -->
+                    <div class="inline-flex items-center gap-2
+                                border border-violet-500/30
+                                bg-violet-500/10
+                                px-4 py-2 rounded-full
+                                text-sm text-violet-300
+                                mb-6">
+
+                        <span class="h-2 w-2 rounded-full bg-green-400"></span>
+
+                        Turning ideas into real projects
+                    </div>
+
+
+                    <!-- Heading -->
+
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl
+                               font-extrabold leading-tight">
+
+                        Hi, I'm
+
+                        <span class="text-transparent
+                                     bg-clip-text
+                                     bg-gradient-to-r
+                                     from-violet-400
+                                     to-indigo-400">
+
+                            Shubham
+
+                        </span>
+
+                        👋
+                    </h1>
+
+
+                    <!-- Subtitle -->
+
+                    <h2 class="mt-5 text-xl sm:text-2xl
+                               font-medium text-gray-300">
+
+                        BSc Student • Aspiring Web Developer
+
+                    </h2>
+
+
+                    <p class="mt-6 max-w-xl
+                              text-gray-400
+                              leading-7">
+
+                        I love building beautiful and functional
+                        web experiences. Currently learning,
+                        exploring and turning ideas into real projects.
+
+                    </p>
+
+
+                    <!-- Buttons -->
+
+                    <div class="flex flex-wrap gap-4 mt-8">
+
+                        <a href="#projects"
+                           class="px-6 py-3 rounded-xl
+                                  bg-violet-600
+                                  hover:bg-violet-500
+                                  font-semibold
+                                  transition">
+
+                            View My Projects →
+
+                        </a>
+
+                        <a href="#contact"
+                           class="px-6 py-3 rounded-xl
+                                  border border-violet-500/40
+                                  hover:bg-violet-500/10
+                                  font-semibold
+                                  transition">
+
+                            Contact Me
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Social -->
+
+                    <div class="flex gap-5 mt-8 text-gray-400">
+
+                        <a href="#" class="hover:text-white text-xl">◉</a>
+                        <a href="#" class="hover:text-white text-xl">in</a>
+                        <a href="#" class="hover:text-white text-xl">◎</a>
+                        <a href="#" class="hover:text-white text-xl">✉</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="relative flex justify-center">
+
+                    <!-- Glow -->
+
+                    <div class="absolute
+                                w-72 h-72
+                                bg-violet-600/30
+                                blur-[100px]
+                                rounded-full">
+                    </div>
+
+
+                    <!-- Profile Circle -->
+
+                    <div class="relative
+                                w-72 h-72
+                                sm:w-96 sm:h-96
+                                rounded-full
+                                bg-gradient-to-br
+                                from-violet-500
+                                to-indigo-700
+                                p-1">
+
+                        <div class="w-full h-full
+                                    rounded-full
+                                    bg-[#111522]
+                                    flex items-center
+                                    justify-center
+                                    overflow-hidden">
+
+                            <!-- Replace this with your photo -->
+
+                            <div class="w-600 h-100 rounded-full overflow-hidden">
+
+                                <p class="text-gray-400 ">
+                                <img src="IMG-20231120-WA0065 (1).jpg" class="w-full h-full object-cover" >
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Learning Card -->
+
+                    <div class="absolute
+                                -bottom-5 -right-2
+                                sm:right-0
+                                bg-[#151a29]
+                                border border-white/10
+                                rounded-2xl
+                                p-5
+                                w-52
+                                shadow-2xl">
+
+                        <p class="font-semibold mb-3">
+                            Currently Learning
+                        </p>
+
+                        <ul class="text-sm text-gray-400 space-y-2">
+
+                            <li>• JavaScript</li>
+                            <li>• Tailwind CSS</li>
+                            <li>• DSA (C++)</li>
+                            <li>• Building Projects</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about"
+                 class="border-t border-white/5">
+
+            <div class="max-w-6xl mx-auto
+                        px-6 py-24">
+
+                <p class="text-violet-400 text-sm font-semibold">
+                    ABOUT ME
+                </p>
+
+                <div class="grid lg:grid-cols-2
+                            gap-12 mt-3">
+
+                    <div>
+
+                        <h2 class="text-4xl font-bold">
+
+                            A little bit
+                            <span class="text-violet-400">
+                                about me
+                            </span>
+
+                        </h2>
+
+                        <p class="mt-6 text-gray-400 leading-7">
+
+                            I'm a BSc student with a strong interest
+                            in web development, problem solving and
+                            technology.
+
+                        </p>
+
+                        <p class="mt-4 text-gray-400 leading-7">
+
+                            I enjoy learning new things and building
+                            projects that make an impact. My goal is
+                            to become a skilled developer and work on
+                            meaningful solutions.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- About Cards -->
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+
+                        <div class="card">
+                            🎓
+                            <h3>Student</h3>
+                            <p>BSc Student</p>
+                        </div>
+
+                        <div class="card">
+                            💻
+                            <h3>Web Developer</h3>
+                            <p>Learning & Building</p>
+                        </div>
+
+                        <div class="card">
+                            💡
+                            <h3>Always Curious</h3>
+                            <p>Exploring Technology</p>
+                        </div>
+
+                        <div class="card">
+                            🎯
+                            <h3>Goal</h3>
+                            <p>Become Better Everyday</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills"
+                 class="border-t border-white/5">
+
+            <div class="max-w-6xl mx-auto
+                        px-6 py-24">
+
+                <p class="text-violet-400 text-sm font-semibold">
+                    MY SKILLS
+                </p>
+
+                <h2 class="text-4xl font-bold mt-2">
+                    Technologies
+                    <span class="text-violet-400">
+                        I work with
+                    </span>
+                </h2>
+
+
+                <div class="grid grid-cols-2
+                            md:grid-cols-4
+                            gap-4 mt-10">
+
+
+                    <!-- Skill -->
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">🌐</div>
+
+                        <h3 class="font-semibold mt-4">
+                            HTML
+                        </h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress w-[90%]"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">🎨</div>
+
+                        <h3 class="font-semibold mt-4">
+                            CSS
+                        </h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress w-[80%]"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">⚡</div>
+
+                        <h3 class="font-semibold mt-4">
+                            JavaScript
+                        </h3>
+
+                        <div class="skill-bar ">
+                            <div class="skill-progress w-[65%]"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">🌊</div>
+
+                        <h3 class="font-semibold mt-4">
+                            Tailwind
+                        </h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress w-[60%]"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">⚙️</div>
+
+                        <h3 class="font-semibold mt-4">
+                            C++
+                        </h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress w-[70%]"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">🔀</div>
+
+                        <h3 class="font-semibold mt-4">
+                            Git
+                        </h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress w-[55%]"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">🐙</div>
+
+                        <h3 class="font-semibold mt-4">
+                            GitHub
+                        </h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress w-[60%]"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer">
+
+                        <div class="text-4xl">💙</div>
+
+                        <h3 class="font-semibold mt-4">
+                            VS Code
+                        </h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress w-[85%]"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects"
+                 class="border-t border-white/5">
+
+            <div class="max-w-6xl mx-auto
+                        px-6 py-24">
+
+                <p class="text-violet-400 text-sm font-semibold">
+                    MY PROJECTS
+                </p>
+
+                <h2 class="text-4xl font-bold mt-2">
+                    Some of my
+                    <span class="text-violet-400">
+                        recent work
+                    </span>
+                </h2>
+
+
+                <div class="grid md:grid-cols-3
+                            gap-6 mt-10">
+
+
+                    <!-- Project 1 -->
+
+                    <div class="project-card">
+
+                        <div class="h-48 rounded-xl
+                                    bg-gradient-to-br
+                                    from-violet-700
+                                    to-indigo-900
+                                    flex items-center
+                                    justify-center
+                                    text-6xl">
+
+                            🛒
+
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-5">
+                            E-Commerce Website
+                        </h3>
+
+                        <p class="text-gray-400 mt-3 text-sm">
+                            A responsive shopping website
+                            built with HTML and CSS.
+                        </p>
+
+                        <div class="flex gap-2 mt-4">
+
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+
+                        </div>
+
+                        <a href="#"
+                           class="inline-block
+                                  text-violet-400
+                                  mt-5
+                                  hover:text-violet-300">
+
+                            View Project →
+                        </a>
+
+                    </div>
+
+
+                    <!-- Project 2 -->
+
+                    <div class="project-card">
+
+                        <div class="h-48 rounded-xl
+                                    bg-gradient-to-br
+                                    from-indigo-700
+                                    to-violet-900
+                                    flex items-center
+                                    justify-center
+                                    text-6xl">
+
+                            💻
+
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-5">
+                            Personal Portfolio
+                        </h3>
+
+                        <p class="text-gray-400 mt-3 text-sm">
+                            A modern portfolio website
+                            showcasing my skills and projects.
+                        </p>
+
+                        <div class="flex gap-2 mt-4">
+
+                            <span class="tag">HTML</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">JS</span>
+
+                        </div>
+
+                        <a href="#"
+                           class="inline-block
+                                  text-violet-400
+                                  mt-5">
+
+                            View Project →
+                        </a>
+
+                    </div>
+
+
+                    <!-- Project 3 -->
+
+                    <div class="project-card">
+
+                        <div class="h-48 rounded-xl
+                                    bg-gradient-to-br
+                                    from-blue-700
+                                    to-violet-900
+                                    flex items-center
+                                    justify-center
+                                    text-6xl">
+
+                            ✅
+
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-5">
+                            To-Do List
+                        </h3>
+
+                        <p class="text-gray-400 mt-3 text-sm">
+                            A simple task management application
+                            using JavaScript.
+                        </p>
+
+                        <div class="flex gap-2 mt-4">
+
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+
+                        </div>
+
+                        <a href="#"
+                           class="inline-block
+                                  text-violet-400
+                                  mt-5">
+
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXPERIENCE / JOURNEY ================= -->
+
+        <section id="experience"
+                 class="border-t border-white/5">
+
+            <div class="max-w-6xl mx-auto
+                        px-6 py-24">
+
+                <p class="text-violet-400 text-sm font-semibold">
+                    MY JOURNEY
+                </p>
+
+                <h2 class="text-4xl font-bold mt-2">
+                    Learning
+                    <span class="text-violet-400">
+                        Never Stops
+                    </span>
+                </h2>
+
+
+                <div class="grid md:grid-cols-4
+                            gap-8 mt-12">
+
+                    <div>
+                        <div class="text-violet-400 font-bold">
+                            2023
+                        </div>
+
+                        <h3 class="font-semibold mt-2">
+                            Started
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Started my web development journey.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <div class="text-violet-400 font-bold">
+                            2024
+                        </div>
+
+                        <h3 class="font-semibold mt-2">
+                            First Projects
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Built my first few websites.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <div class="text-violet-400 font-bold">
+                            2025
+                        </div>
+
+                        <h3 class="font-semibold mt-2">
+                            Learning More
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Started JavaScript and Tailwind CSS.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <div class="text-violet-400 font-bold">
+                            Next
+                        </div>
+
+                        <h3 class="font-semibold mt-2">
+                            Bigger Goals
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Building better projects and
+                            looking for opportunities.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOBBIES ================= -->
+
+        <section class="border-t border-white/5">
+
+            <div class="max-w-6xl mx-auto
+                        px-6 py-20">
+
+                <p class="text-violet-400 text-sm font-semibold">
+                    BEYOND CODE
+                </p>
+
+                <h2 class="text-4xl font-bold mt-2">
+                    Things I
+                    <span class="text-violet-400">
+                        enjoy
+                    </span>
+                </h2>
+
+
+                <div class="flex flex-wrap gap-4 mt-8">
+
+                    <div class="hobby">🏋️ Fitness</div>
+                    <div class="hobby">📚 Reading</div>
+                    <div class="hobby">🎵 Music</div>
+                    <div class="hobby">🎮 Games</div>
+                    <div class="hobby">📷 Photography</div>
+                    <div class="hobby">🌿 Nature</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact"
+                 class="border-t border-white/5">
+
+            <div class="max-w-6xl mx-auto
+                        px-6 py-24">
+
+                <p class="text-violet-400 text-sm font-semibold">
+                    GET IN TOUCH
+                </p>
+
+                <h2 class="text-4xl font-bold mt-2">
+                    Let's build
+                    <span class="text-violet-400">
+                        something great
+                    </span>
+                </h2>
+
+                <p class="text-gray-400
+                          max-w-xl
+                          mt-5
+                          leading-7">
+
+                    I'm always open to discussing new projects,
+                    creative ideas or opportunities to be part
+                    of your vision.
+
+                </p>
+
+
+                <div class="grid md:grid-cols-3
+                            gap-4 mt-10">
+
+                    <a href="mailto:your@email.com"
+                       class="contact-card">
+
+                        ✉️
+
+                        <div>
+                            <p class="font-semibold">
+                                Email
+                            </p>
+
+                            <p class="text-gray-400 text-sm">
+                                Drop me an email
+                            </p>
+                        </div>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="contact-card">
+
+                        💼
+
+                        <div>
+                            <p class="font-semibold">
+                                LinkedIn
+                            </p>
+
+                            <p class="text-gray-400 text-sm">
+                                Let's connect
+                            </p>
+                        </div>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="contact-card">
+
+                        🐙
+
+                        <div>
+                            <p class="font-semibold">
+                                GitHub
+                            </p>
+
+                            <p class="text-gray-400 text-sm">
+                                Check my work
+                            </p>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="border-t border-white/5">
+
+        <div class="max-w-6xl mx-auto
+                    px-6 py-8
+                    flex flex-col md:flex-row
+                    justify-between
+                    gap-4">
+
+            <p class="font-bold text-xl">
+                Shubham<span class="text-violet-500">.</span>
+            </p>
+
+            <p class="text-gray-500 text-sm">
+                Built with ❤️ using Tailwind CSS
+            </p>
+
+            <div class="flex gap-5 text-sm text-gray-400">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
