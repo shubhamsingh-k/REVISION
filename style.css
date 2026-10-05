@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    background-color: #294D5d;
+}
+table {
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+
+td{
+    width: 150px;
+    height: 55px;
+    border: 1px solid #0c191f;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.metals {
+    background-color: #dbd81d;
+    width: 1560px;
+    height:40px;
+    padding: 20px;
+}
+
+
+
+
+
+.liquid-elements {
+    background-color: rgb(5, 124, 5);
+}
+.metalloid {
+    background-color: rgb(233, 69, 10)
+}
+
+.nonmetal {
+    background-color: #4a09e4;
+}
+
+
+
+.noble {
+    background-color: #4a09e4;
+    color: #f10606;
+    font-weight: 1500;
+}
+
+.empty{
+    border: none;
+    background: transparent;
+}
+
+.atomic-number{
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    font-size: 10px;
+    color: #f10606;
+}
+
+
+
