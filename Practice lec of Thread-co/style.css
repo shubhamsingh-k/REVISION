@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.one{
+    background-color: blueviolet;
+    width: fit-content;
+    /* width: 80em; */
+    margin: 20px 40px;
+    padding: 20px 90px;
+    /* border: 1px; */
+    border-width: 20px;
+    border: 10px solid brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    /* font-weight: bolder; */
+    display: flex;
+     flex-direction: row;
+}
+
+.two{
+    background-color: blue;
+    display: grid;
+}
