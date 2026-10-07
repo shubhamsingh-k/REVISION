@@ -1351,6 +1351,17 @@ function showInfo(element) {
     card.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
+
+
+
+   
+   
+
+    
+  
+
+
+
 function runSearch() {
     const query = document.getElementById("search-input").value.trim().toLowerCase();
     const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter || "all";
@@ -1745,3 +1756,364 @@ tryAgain.addEventListener("click", function () {
     generateQuestion();
 
 });
+
+
+// =====================================================
+// ⚛️ ATOM / ELECTRON SHELL VISUALIZATION
+// =====================================================
+
+function showAtom(symbol) {
+
+    const data = getElementData(symbol);
+
+    const atomicNumber = Number(data.number);
+
+    // -----------------------------------------------
+// Nucleus particles
+// -----------------------------------------------
+
+const protonCount = atomicNumber;
+
+// Use the nearest whole-number mass
+// to estimate the common isotope's neutron count
+
+const massNumber = Math.round(Number(data.mass));
+
+const neutronCount =
+    massNumber - protonCount;
+
+
+document.getElementById("proton-count").textContent =
+    protonCount;
+
+document.getElementById("neutron-count").textContent =
+    neutronCount;
+
+    // -----------------------------------------------
+    // Update atom information
+    // -----------------------------------------------
+
+    document.getElementById("atom-name").textContent =
+        data.name;
+
+    document.getElementById("atom-symbol").textContent =
+        symbol;
+
+    document.getElementById("nucleus-symbol").textContent =
+        symbol;
+
+
+    // -----------------------------------------------
+    // Get all shells
+    // -----------------------------------------------
+
+    const shells =
+        document.querySelectorAll(".shell");
+
+
+    // Remove old electrons
+
+    shells.forEach(function (shell) {
+
+        shell.innerHTML = "";
+
+    });
+
+
+    // -----------------------------------------------
+    // -----------------------------------------------
+// REAL ELECTRON SHELL DISTRIBUTION
+// -----------------------------------------------
+
+// Noble gas core distributions
+
+const nobleGasShells = {
+
+    He: [2],
+
+    Ne: [2, 8],
+
+    Ar: [2, 8, 8],
+
+    Kr: [2, 8, 18, 8],
+
+    Xe: [2, 8, 18, 18, 8],
+
+    Rn: [2, 8, 18, 32, 18, 8]
+
+};
+
+
+// Superscript → normal number
+
+const superscriptNumbers = {
+
+    "⁰": 0,
+    "¹": 1,
+    "²": 2,
+    "³": 3,
+    "⁴": 4,
+    "⁵": 5,
+    "⁶": 6,
+    "⁷": 7,
+    "⁸": 8,
+    "⁹": 9
+
+};
+
+
+// Convert superscript number to normal number
+
+function convertSuperscript(value) {
+
+    return Number(
+        [...value]
+            .map(char => superscriptNumbers[char])
+            .join("")
+    );
+
+}
+
+
+// Start with empty shells
+
+const shellElectrons = [
+    0, 0, 0, 0, 0, 0, 0
+];
+
+
+// Get electronic configuration
+
+const configuration =
+    data.electronicConfiguration;
+
+
+// -----------------------------------------------
+// Handle noble gas shorthand
+// -----------------------------------------------
+
+const coreMatch =
+    configuration.match(/^\[([A-Z][a-z]?)\]/);
+
+
+let remainingConfiguration =
+    configuration;
+
+
+if (coreMatch) {
+
+    const coreSymbol =
+        coreMatch[1];
+
+    const coreShells =
+        nobleGasShells[coreSymbol];
+
+    if (coreShells) {
+
+        coreShells.forEach(
+            (electrons, index) => {
+
+                shellElectrons[index] +=
+                    electrons;
+
+            }
+        );
+
+    }
+
+
+    // Remove [Ar], [Ne], etc.
+
+    remainingConfiguration =
+        configuration
+            .replace(coreMatch[0], "")
+            .trim();
+
+}
+
+
+// -----------------------------------------------
+// Read remaining orbitals
+// -----------------------------------------------
+
+const orbitals =
+    remainingConfiguration.match(
+        /\d+[spdf][⁰¹²³⁴⁵⁶⁷⁸⁹]+/g
+    ) || [];
+
+
+orbitals.forEach(orbital => {
+
+    const match =
+        orbital.match(
+            /(\d+)[spdf]([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/
+        );
+
+    if (!match) return;
+
+
+    const shellNumber =
+        Number(match[1]);
+
+    const electrons =
+        convertSuperscript(match[2]);
+
+
+    shellElectrons[shellNumber - 1] +=
+        electrons;
+
+});
+
+
+    // -----------------------------------------------
+    // Create electrons
+    // -----------------------------------------------
+
+    shellElectrons.forEach(function (
+        electronCount,
+        shellIndex
+    ) {
+
+        const shell = shells[shellIndex];
+
+
+        // No electrons in this shell
+
+        if (!shell || electronCount === 0) {
+            return;
+        }
+
+
+        for (
+            let i = 0;
+            i < electronCount;
+            i++
+        ) 
+///
+    for (let i = 0; i < electronCount; i++) {
+
+    const electron =
+        document.createElement("span");
+
+    electron.classList.add("electron");
+
+
+    // Angle of this electron
+
+    const angle =
+        (360 / electronCount) * i;
+
+
+    // Radius of the shell
+
+    const radius =
+        shell.offsetWidth / 2;
+
+
+    // Convert angle to radians
+
+    const radians =
+        angle * Math.PI / 180;
+
+
+    // Calculate position
+
+    const x =
+        radius * Math.cos(radians);
+
+    const y =
+        radius * Math.sin(radians);
+
+
+    // Position electron
+
+    electron.style.left =
+        `calc(50% + ${x}px)`;
+
+    electron.style.top =
+        `calc(50% + ${y}px)`;
+
+
+    // Center electron on its position
+
+    electron.style.transform =
+        "translate(-50%, -50%)";
+
+
+    shell.appendChild(electron);
+
+}
+    });
+
+
+    // -----------------------------------------------
+    // Update shell information
+    // -----------------------------------------------
+
+    document.getElementById("shell-k").textContent =
+        shellElectrons[0] || 0;
+
+    document.getElementById("shell-l").textContent =
+        shellElectrons[1] || 0;
+
+    document.getElementById("shell-m").textContent =
+        shellElectrons[2] || 0;
+
+    document.getElementById("shell-n").textContent =
+        shellElectrons[3] || 0;
+
+    document.getElementById("shell-o").textContent =
+    shellElectrons[4] || 0;
+
+    document.getElementById("shell-p").textContent =
+    shellElectrons[5] || 0;
+
+    document.getElementById("shell-q").textContent =
+    shellElectrons[6] || 0;
+    // -----------------------------------------------
+    // Show atom card
+    // -----------------------------------------------
+
+    const atomCard =
+        document.getElementById("atom-card");
+
+    atomCard.classList.add("show");
+
+}
+
+
+// =====================================================
+// CONNECT ATOM WITH PERIODIC TABLE
+// =====================================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const elements =
+            document.querySelectorAll(
+                "td[data-element]"
+            );
+
+
+        elements.forEach(function (element) {
+
+            element.addEventListener(
+                "click",
+                function () {
+
+                    const symbol =
+                        this.dataset.element;
+
+
+                    // Show atom
+
+                    showAtom(symbol);
+
+                }
+            );
+
+        });
+
+    }
+);
