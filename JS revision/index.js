@@ -93,3 +93,4 @@
 //     console.log('Mail sent to recipient');
 // }
 
+console.log(5/2);
